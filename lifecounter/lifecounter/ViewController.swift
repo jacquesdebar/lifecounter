@@ -15,15 +15,98 @@ class ViewController: UIViewController {
   @IBOutlet weak var p2life: UILabel!
   @IBOutlet weak var p3life: UILabel!
   @IBOutlet weak var p4life: UILabel!
+  @IBOutlet weak var p5life: UILabel!
+  @IBOutlet weak var p6life: UILabel!
+  @IBOutlet weak var p7life: UILabel!
+  @IBOutlet weak var p8life: UILabel!
   
   @IBOutlet weak var loser: UILabel!
   
+  
+  @IBOutlet weak var p3: UIView!
+  @IBOutlet weak var p4: UIView!
+  @IBOutlet weak var p5: UIView!
+  @IBOutlet weak var p6: UIView!
+  @IBOutlet weak var p7: UIView!
+  @IBOutlet weak var p8: UIView!
+  
+  
+  @IBOutlet weak var p1m5: UIButton!
+  @IBOutlet weak var p1a5: UIButton!
+  @IBOutlet weak var p2m5: UIButton!
+  @IBOutlet weak var p2a5: UIButton!
+  @IBOutlet weak var p3m5: UIButton!
+  @IBOutlet weak var p3a5: UIButton!
+  @IBOutlet weak var p4m5: UIButton!
+  @IBOutlet weak var p4a5: UIButton!
+  @IBOutlet weak var p5m5: UIButton!
+  @IBOutlet weak var p5a5: UIButton!
+  @IBOutlet weak var p6m5: UIButton!
+  @IBOutlet weak var p6a5: UIButton!
+  @IBOutlet weak var p7m5: UIButton!
+  @IBOutlet weak var p7a5: UIButton!
+  @IBOutlet weak var p8m5: UIButton!
+  @IBOutlet weak var p8a5: UIButton!
+  
+  
+  @IBOutlet weak var dmg: UITextField!
+  
+  @IBOutlet weak var addButton: UIButton!
+  @IBOutlet weak var removeButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
   
+  
+  @IBAction func addTap(_ sender: UIButton) {
+    if (p3.isHidden) {
+      p3.isHidden = false
+      if (!removeButton.isEnabled) {
+        removeButton.isEnabled = true
+      }
+    } else if (p4.isHidden) {
+      p4.isHidden = false
+    } else if (p5.isHidden) {
+      p5.isHidden = false
+    } else if (p6.isHidden) {
+      p6.isHidden = false
+    } else if (p7.isHidden) {
+      p7.isHidden = false
+    } else {
+      p8.isHidden = false
+      addButton.isEnabled = false
+    }
+    
+  }
+  
+  
+  @IBAction func removeTap(_ sender: Any) {
+    if (!p8.isHidden) {
+      p8.isHidden = true
+      p8life.text = "20"
+      if (!addButton.isEnabled) {
+        addButton.isEnabled = true
+      }
+    } else if (!p7.isHidden) {
+      p7.isHidden = true
+      p7life.text = "20"
+    } else if (!p6.isHidden) {
+      p6.isHidden = true
+      p6life.text = "20"
+    } else if (!p5.isHidden) {
+      p5.isHidden = true
+      p5life.text = "20"
+    } else if (!p4.isHidden) {
+      p4.isHidden = true
+      p4life.text = "20"
+    } else {
+      p3.isHidden = true
+      p3life.text = "20"
+      removeButton.isEnabled = false
+    }
+  }
   
   
   
@@ -43,26 +126,41 @@ class ViewController: UIViewController {
     } else if (sender.tag < 12) {
       player = p3life
       playerNum = "3"
-    } else {
+    } else if (sender.tag < 16) {
       player = p4life
       playerNum = "4"
+    } else if (sender.tag < 20) {
+      player = p5life
+      playerNum = "5"
+    } else if (sender.tag < 24) {
+      player = p6life
+      playerNum = "6"
+    } else if (sender.tag < 28) {
+      player = p7life
+      playerNum = "7"
+    } else {
+      player = p8life
+      playerNum = "8"
     }
     
     if ((sender.tag % 4) == 0) {
-      update = -5
+      update = (-1 * abs(Int(dmg.text!)!))
     } else if ((sender.tag % 4) == 1) {
       update = -1
     } else if ((sender.tag % 4) == 2) {
       update = 1
     } else {
-      update = 5
+      update = abs(Int(dmg.text!)!)
     }
     
     let oldLife : Int = Int(player.text!)!
     let newLife : Int = oldLife + update
     
+    addButton.isEnabled = false
+    
     if (newLife <= 0) {
       loser.text = "Player " + playerNum + " LOSES!"
+      
     }
     
     player.text = String(newLife)
@@ -70,6 +168,13 @@ class ViewController: UIViewController {
   }
   
   
+  @IBAction func changeDmg(_ sender: Any) {
+    let newDmg = Int(dmg.text!)!
+//    p1m5.text = "-\(newDmg)"
+    
+    
+    
+  }
   
   
   
