@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
   
   
+  
+  
+  
   @IBOutlet weak var p1life: UILabel!
   @IBOutlet weak var p2life: UILabel!
   @IBOutlet weak var p3life: UILabel!
@@ -23,33 +26,33 @@ class ViewController: UIViewController {
   @IBOutlet weak var loser: UILabel!
   
   
-  @IBOutlet weak var p3: UIView!
-  @IBOutlet weak var p4: UIView!
-  @IBOutlet weak var p5: UIView!
-  @IBOutlet weak var p6: UIView!
-  @IBOutlet weak var p7: UIView!
-  @IBOutlet weak var p8: UIView!
+  @IBOutlet weak var p3: UIStackView!
+  @IBOutlet weak var p4: UIStackView!
+  @IBOutlet weak var p5: UIStackView!
+  @IBOutlet weak var p6: UIStackView!
+  @IBOutlet weak var p7: UIStackView!
+  @IBOutlet weak var p8: UIStackView!
   
-  
-  @IBOutlet weak var p1m5: UIButton!
-  @IBOutlet weak var p1a5: UIButton!
-  @IBOutlet weak var p2m5: UIButton!
-  @IBOutlet weak var p2a5: UIButton!
-  @IBOutlet weak var p3m5: UIButton!
-  @IBOutlet weak var p3a5: UIButton!
-  @IBOutlet weak var p4m5: UIButton!
-  @IBOutlet weak var p4a5: UIButton!
-  @IBOutlet weak var p5m5: UIButton!
-  @IBOutlet weak var p5a5: UIButton!
-  @IBOutlet weak var p6m5: UIButton!
-  @IBOutlet weak var p6a5: UIButton!
-  @IBOutlet weak var p7m5: UIButton!
-  @IBOutlet weak var p7a5: UIButton!
-  @IBOutlet weak var p8m5: UIButton!
-  @IBOutlet weak var p8a5: UIButton!
+  @IBOutlet weak var p1mx: UIButton!
+  @IBOutlet weak var p1ax: UIButton!
+  @IBOutlet weak var p2mx: UIButton!
+  @IBOutlet weak var p2ax: UIButton!
+  @IBOutlet weak var p3mx: UIButton!
+  @IBOutlet weak var p3ax: UIButton!
+  @IBOutlet weak var p4mx: UIButton!
+  @IBOutlet weak var p4ax: UIButton!
+  @IBOutlet weak var p5mx: UIButton!
+  @IBOutlet weak var p5ax: UIButton!
+  @IBOutlet weak var p6mx: UIButton!
+  @IBOutlet weak var p6ax: UIButton!
+  @IBOutlet weak var p7mx: UIButton!
+  @IBOutlet weak var p7ax: UIButton!
+  @IBOutlet weak var p8mx: UIButton!
+  @IBOutlet weak var p8ax: UIButton!
   
   
   @IBOutlet weak var dmg: UITextField!
+  @IBOutlet weak var changeDmg: UIButton!
   
   @IBOutlet weak var addButton: UIButton!
   @IBOutlet weak var removeButton: UIButton!
@@ -143,6 +146,7 @@ class ViewController: UIViewController {
       playerNum = "8"
     }
     
+    
     if ((sender.tag % 4) == 0) {
       update = (-1 * abs(Int(dmg.text!)!))
     } else if ((sender.tag % 4) == 1) {
@@ -168,15 +172,10 @@ class ViewController: UIViewController {
   }
   
   
+  
   @IBAction func changeDmg(_ sender: Any) {
-    let newDmg = Int(dmg.text!)!
-//    p1m5.text = "-\(newDmg)"
-    
-    
     
   }
-  
-  
   
   
   
