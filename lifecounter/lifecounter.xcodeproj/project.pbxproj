@@ -13,6 +13,7 @@
 		708A071222002A9C0084A10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708A071122002A9C0084A10E /* Assets.xcassets */; };
 		708A071522002A9C0084A10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708A071322002A9C0084A10E /* LaunchScreen.storyboard */; };
 		708A072022002A9C0084A10E /* lifecounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A071F22002A9C0084A10E /* lifecounterUITests.swift */; };
+		70E9FBEC2206B5CF00B54241 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9FBEB2206B5CF00B54241 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		708A071B22002A9C0084A10E /* lifecounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifecounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		708A071F22002A9C0084A10E /* lifecounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterUITests.swift; sourceTree = "<group>"; };
 		708A072122002A9C0084A10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E9FBEB2206B5CF00B54241 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				708A071122002A9C0084A10E /* Assets.xcassets */,
 				708A071322002A9C0084A10E /* LaunchScreen.storyboard */,
 				708A071622002A9C0084A10E /* Info.plist */,
+				70E9FBEB2206B5CF00B54241 /* HistoryViewController.swift */,
 			);
 			path = lifecounter;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E9FBEC2206B5CF00B54241 /* HistoryViewController.swift in Sources */,
 				708A070D22002A9A0084A10E /* ViewController.swift in Sources */,
 				708A070B22002A9A0084A10E /* AppDelegate.swift in Sources */,
 			);
